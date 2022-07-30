@@ -107,7 +107,7 @@ namespace MSFSFlightDataDemo
             catch (Exception e)
             {
                 Console.WriteLine("Unable to request data from MSFS");
-                Console.WriteLine("Error -> [{0}]", e.Message);
+                Console.WriteLine("Error: {0}", e.Message);
             }
         }
 
@@ -132,7 +132,7 @@ namespace MSFSFlightDataDemo
         void SimConnect_OnRecvException(SimConnect sender, SIMCONNECT_RECV_EXCEPTION data)
         {
             Console.WriteLine("Connection to MSFS has encountered an exception");
-            Console.WriteLine("Error -> [{0}]", data.dwException);
+            Console.WriteLine("Error: {0}", data.dwException);
         }
 
         // Handle request response events
